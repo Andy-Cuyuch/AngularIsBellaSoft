@@ -1,0 +1,43 @@
+<section class="h-100 h-custom">
+  <br>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <div class="card-body p-4 p-md-5">
+            <div class="text-center">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">AGREGAR TAREA </h3>
+            </div>
+            <form class="px-md-2" (ngSubmit)="entitySave(entitySaveForm)" #entitySaveForm="ngForm">
+              <div class="form-outline mb-4">
+                <input [(ngModel)]="entity.nameTask" name="nameTask" #nameTask="ngModel" type="text" id="form3Example1q"
+                  class="form-control" required />
+                <label class="form-label" for="form3Example1q">Tarea</label>
+              </div>
+              <div class="form-outline mb-4">
+                <div class="form-outline mb-4">
+                  <input [(ngModel)]="entity.userCharge" name="userCharge" #userCharge="ngModel" type="text"
+                    id="form3Example1q" class="form-control" required />
+                  <label class="form-label" for="form3Example1q">Usuario</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input [(ngModel)]="entity.delivery" name="delivery"  #delivery="ngModel" type="text"
+                    id="form3Example1q" class="form-control" required />
+                  <label class="form-label" for="form3Example1q">Tarea</label>
+                </div>
+                <div class="text-center">
+                  <button [disabled]="!entitySaveForm.form.valid" type="submit"
+                    class="btn btn-success btn-lg mb-1">GUARDAR</button>
+                </div>
+                <div class="text-center" style="margin-bottom: 10px;">
+                  <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!" class="link-danger"
+                      routerLink="/Entity">Entity</a></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
